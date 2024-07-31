@@ -4,8 +4,7 @@
 //реализация функции "IsKPeriodic"
 int IsKPeriodic(int k, string letters) 
 {
-	bool m = false;
-	int n = 1;
+
 	if (letters.length() % k)         // проверка на кратность "k" всей строки если нет, то сразу выход
 		return 0;
 
