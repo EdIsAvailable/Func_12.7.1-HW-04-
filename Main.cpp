@@ -3,21 +3,20 @@
 #include<vector>
 using namespace std;
 
-
-
 int main() {
+	setlocale(LC_ALL, "Rus");
 	int k = 3;
 	string letter;
-	cout << "Enter k: ";
+	cout << "Введите число k: ";
 	cin >> k;
-	cout << "Enter string: ";
+	cout << "Введите строку для проверки: ";
 	cin >> letter;
 
 	int isPeriodic = IsKPeriodic(k, letter);
 
 	if(isPeriodic)
-		cout << "Yes" << endl;
-	else cout << "No" << endl;
+		cout << "Строка кратна числу k" << endl;
+	else cout << "Строка НЕкратна числу k" << endl;
 
 	
 	return 0;

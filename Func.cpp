@@ -1,27 +1,28 @@
-// сначала проверка на кратность к всей строки если нет, то сразу выход
+
 // откусываем из строки е символов- переменна€ string temp в ней оставша€с€ строка
 #include"Func.h"
-int IsKPeriodic(int k, string letters)
+//реализаци€ функции "IsKPeriodic"
+int IsKPeriodic(int k, string letters) 
 {
 	bool m = false;
 	int n = 1;
-	if (letters.length() % k)
+	if (letters.length() % k)         // проверка на кратность "k" всей строки если нет, то сразу выход
 		return 0;
 
-	//polu4aem periodi4nuyu stroku - etalon
+	//ѕолучаем подстроку - strEtalon
 	string strEtalon = letters.substr(0, k);
-	//ostatok
+	// ¬ычисл€ем остаток строки
 	string strProcess = letters.substr(k, letters.length() - k);
-
+	// обозначим условие продолжени€ цикла, пока в строке остаютс€ символы
 	while (strProcess.length() > 0)
 	{
-		//polu4aem pervye k simvolov
+		// ѕрисваиваем остаток символов перменной tmp
 		string tmp = strProcess.substr(0, k);
 
-		//sravnivaem tmp s etalonom
+		// —равниваем с эталонной подстрокой
 		if (tmp != strEtalon)
 			return 0;
-
+		// отнимаем подстроку от остатка строки
 		strProcess = strProcess.substr(k, strProcess.length() - k);
 	}
 }

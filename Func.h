@@ -3,5 +3,6 @@
 #include<iostream>
 using namespace std;
 
-int IsKPeriodic(int k, string letters);
+// сздаём функцию "IsKPeriodic" для проверки строки "letters" на кратность числу "k"
+int IsKPeriodic(int k, string letters); 
 
